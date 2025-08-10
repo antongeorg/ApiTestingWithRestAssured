@@ -14,6 +14,7 @@ public class UserApi {
         return
                 given()
                         .baseUri(BASE_URL)
+                        .header("x-api-key", "reqres-free-v1")
                         .when()
                         .get("/api/users/" + userId);
     }
@@ -25,6 +26,7 @@ public class UserApi {
         return
                 given()
                         .baseUri(BASE_URL)
+                        .header("x-api-key", "reqres-free-v1")
                         .contentType(ContentType.JSON)
                         .body(payload)
                         .when()
